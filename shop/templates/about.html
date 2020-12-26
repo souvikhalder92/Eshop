@@ -1,0 +1,78 @@
+   {%extends 'index.html'%}
+{%load static%}
+
+
+    {% block titlee %}
+       single product
+
+     {% endblock titlee %}
+
+
+
+     {% block description %}
+     {{setting.description}}
+
+        {% endblock description %}
+
+
+        {% block keyword %}
+
+        {% endblock keyword %}
+
+
+
+            {% block header %}
+                {% include "header.html" %}
+            {% endblock header %}
+
+
+             {% block another_content %}
+ <!-- Begin Li's Breadcrumb Area -->
+            <div class="breadcrumb-area">
+                <div class="container">
+                    <div class="breadcrumb-content">
+                        <ul>
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li class="active">About Us</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-us-wrapper pt-60 pb-40">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 order-last order-lg-first">
+                            <div class="about-text-wrap">
+                                <h1>{{setting.title}}</h1>
+                                <h2><span>Provide Best</span>Product For You</h2>
+                                <p> Life has become so hectic these days, the ability to find anything and everything you need without even leaving your home is a can be a great time saver. No longer do you have to make the trek to the grocery or discount store with your kids in tow, screaming because they want everything in sight. You can order anything you want with the click of your mouse in our Eshop.</p>
+                            </div>
+                        </div>
+                        <!-- About Text End -->
+                        <!-- About Image Start -->
+                        <div class="col-lg-5 col-md-10">
+                            <div class="about-image-wrap">
+                              <img src="{%static ''%}images/about-us/icon/99.jpg" style="width: 90%" alt="">
+                            </div>
+                        </div>
+                        <!-- About Image End -->
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+                   {% endblock another_content %}
+
+
+
+
+                    {% block footer %}
+
+            {% include "footer.html" %}
+
+            {% endblock footer %}

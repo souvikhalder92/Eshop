@@ -25,9 +25,9 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = 'w!imyh3x^n_v=nfva6qtff=&&*c-b&7lgj(8ln!=$xj&bz2nzq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -53,6 +53,7 @@ CRISPY_TEMPLATE_PACK = 'uni_form'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
